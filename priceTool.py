@@ -52,6 +52,8 @@ def writeVal(cnsVal, fileName):
         exit()
 
 def writeLogs(message):
+    if(not os.path.exists("logs")):
+        os.mkdir("logs")
     time = '['+str(datetime.now())+']'
     
     logContent = time+message+'\n'
@@ -61,6 +63,8 @@ def writeLogs(message):
 
 def getConfig():
     try:
+        if(not os.path.exists("config")):
+            os.mkdir("config")
         if(not os.path.exists(Constants.CONFIG_FILE) or os.stat(Constants.CONFIG_FILE).st_size < 1):
             configFile = open(Constants.CONFIG_FILE, "a+")
             interval = input(Constants.INPUT_INTERVAL)
