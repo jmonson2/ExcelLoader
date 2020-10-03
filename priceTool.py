@@ -39,13 +39,13 @@ def writeVal(cnsVal, fileName):
     #Make Excel Changes
     try:
         wb = openpyxl.load_workbook(fileName)
-        ws = wb['Centric']
+        ws = wb["Centric"]
         cnsCell=ws.cell(2,2)
         cnsCell.value = cnsVal
         wb.save(fileName)
         wb.close()
         writeLogs(fileName + " modified")
-        print("Saved " + fileName + " at " + datetime.now().strftime("%D %I:%M %P"))
+        print("Saved " + fileName + " at " + datetime.now().strftime("%x %d:%M %p"))
 
     except Exception as e:
         writeLogs(Constants.WRITEVAL_EXCEPTION + str(e.args))

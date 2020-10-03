@@ -7,7 +7,7 @@ class Constants:
     DATA = "data"
     CONFIG_FILE = "config/config.cfg"
     INPUT_INTERVAL = 'Enter the interval in seconds to run the API call (3600/h) (86400/d): '
-    INPUT_FILENAME = 'Enter the name of your excel file. Needs to be in the same folder as the program: '
+    INPUT_FILENAME = 'Enter the name of your excel file including file extension. Needs to be in the same folder as the program: '
     GETCONFIG_EXCEPTION = "Exception occured in getConfig: "
     WRITEVAL_EXCEPTION = "Exception occured in writeVal: "
     MAIN_EXCEPTION = "Exception occured in main: "
