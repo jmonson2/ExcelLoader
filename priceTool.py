@@ -45,7 +45,7 @@ def writeVal(cnsVal, fileName):
         wb.save(fileName)
         wb.close()
         writeLogs(fileName + " modified")
-        print("Saved " + fileName + " at " + datetime.now().strftime("%x %d:%M %p"))
+        print("Saved " + fileName + " at " + datetime.now().strftime("%x %I:%M %p"))
 
     except Exception as e:
         writeLogs(Constants.WRITEVAL_EXCEPTION + str(e.args))
